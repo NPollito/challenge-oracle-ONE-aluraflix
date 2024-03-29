@@ -1,0 +1,22 @@
+:root {
+    --color-primary: #2A7AE4;
+}
+
+/* sytle bootstrap */
+
+
+/* my style */
+header {
+    background-color: #000000;
+}
+
+header .newBtn {
+    color:white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+.newBtn:hover{
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
