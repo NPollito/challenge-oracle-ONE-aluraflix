@@ -10,17 +10,17 @@ const NewVideo = () => {
 
             <form className="">
                 <TextField nameLabel="Título" name="title" />
-                <TextField nameLabel="Link del video" name="linkVideo" />
+                <TextField type="link" nameLabel="Link del video" name="linkVideo" />
                 <TextField nameLabel="Link de la ímagen del video" name="linkImage" />
                 <TextArea nameLabel="Descripción" name="description"/>
-                <TextField nameLabel="Usuario" name="user" />
+                <TextField nameLabel="Código de seguridad" name="code" />
                 <div className="d-flex flex-wrap justify-content-around justify-content-md-between">
                     <div className="d-flex gap-3 mb-4">
                         <Button type="submit" typeBotton="btn-primary" value="Guardar" paddingX="4"/>
                         <Button type="button" typeBotton="btn-secondary" value="Limpiar" paddingX="4"/>
                     </div>
                     <div className="">
-                        <ButtonLink name="Nueva Categoria" type="btn-primary" paddingX="4" url="new-category"/>
+                        <ButtonLink name="Nueva Categoria" type="btn-primary" paddingX="4" url="/new-category"/>
                     </div>
                 </div>
             </form>
