@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
 
 import Project from './components/Project'
-import NewVideo from './components/NewVideo'
-import NewCategory from './components/NewCategory'
+import NewVideo from './routes/NewVideo'
+import NewCategory from './routes/NewCategory'
 
 function App() {
   

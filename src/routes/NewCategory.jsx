@@ -1,8 +1,10 @@
-import TextField from "./TextField";
-import TextArea from "./TextArea";
-import Button from "./Button";
+import TextField from "../components/layout/TextField";
+import TextArea from "../components/layout/TextArea";
+import Button from "../components/layout/Button";
 
 const NewCategory = () => {
+
+    
     return(
         <main className="container">
             <h2 className="my-4 text-white text-center">Nueva Categoría</h2>

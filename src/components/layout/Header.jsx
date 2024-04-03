@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/logoMain.svg'
-import ButtonLink from '../ButtonLink';
+import ButtonLink from '../../components/layout/ButtonLink';
 
 const Header = () => {
 
