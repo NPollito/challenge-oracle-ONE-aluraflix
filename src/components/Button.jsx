@@ -1,12 +1,11 @@
-const Button = ({name, type, newBtn}) => {
-
-    const newBotton = newBtn ? 'newBtn' : `${type}`
-    const showBotton = newBtn && 'd-none d-md-block'
+const Button = ({type, value, typeBotton, paddingX}) => {
 
     return(
-        <a href="#" className={`btn ${newBotton} ${showBotton}`}>
-            { name }
-        </a>
+        <input 
+            className={`btn ${typeBotton} px-${paddingX}`} 
+            type={type} 
+            value={value}
+        />
     )
 }
 
