@@ -8,16 +8,14 @@ import NewCategory from './routes/NewCategory'
 function App() {
   
   return(
-    <>
       <BrowserRouter>
-      <Header/>
-      <Routes>
-        <Route path='/' element={ <Project /> }/>
-        <Route path='/new-video' element={ <NewVideo /> }/>
-        <Route path='/new-category' element= {<NewCategory /> }/>
-      </Routes>
+        <Header/>
+        <Routes>
+          <Route path='/' element={ <Project /> }/>
+          <Route path='/new-video' element={ <NewVideo /> }/>
+          <Route path='/new-category' element= {<NewCategory /> }/>
+        </Routes>
       </BrowserRouter>
-    </>
   )
 }
 

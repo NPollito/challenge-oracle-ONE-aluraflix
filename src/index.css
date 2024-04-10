@@ -53,7 +53,7 @@ header {
     position: relative;
     padding-top: 15px;
     background-color: var(--bg-fieldText);
-    margin-bottom: 30px;
+    margin-bottom: 37px;
  }
  
 .text-field  {
@@ -94,3 +94,25 @@ header {
     transition: 0.2s;
     font-size: 1rem;
 }
+
+/* campo option list */
+.text-select {
+    width: 100%;
+    border: none;
+    background-color: var(--bg-fieldText);
+    color: #d3d3d4;
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
+.text-select:focus {
+    background-color: var(--color-primary);
+}
+
+/* quitar los botones al input number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
