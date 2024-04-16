@@ -4,10 +4,19 @@ import {
   SELECT_CATEGORY,
   EDIT_CATEGORY,
   CLEAR_CATEGORY,
+  CURRENT_CATEGORY,
 } from "../../types";
 
 export default (state, action) => {
   switch (action.type) {
+    case CURRENT_CATEGORY:
+      return {
+        ...state,
+        categoryvideo: state.categories.filter(
+          (category) => category.id === action.payload
+        ),
+      };
+
     case NEW_CATEGORY:
       return {
         ...state,
@@ -32,6 +41,7 @@ export default (state, action) => {
       return {
         ...state,
         categoryselect: null,
+        categoryvideo: null,
       };
 
     case DELETE_CATEGORY:

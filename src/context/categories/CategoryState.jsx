@@ -8,6 +8,7 @@ import {
   SELECT_CATEGORY,
   EDIT_CATEGORY,
   CLEAR_CATEGORY,
+  CURRENT_CATEGORY,
 } from "../../types";
 
 const CategoryState = ({ children }) => {
@@ -38,10 +39,20 @@ const CategoryState = ({ children }) => {
       },
     ],
     categoryselect: null,
+    categoryvideo: null,
   };
 
   // crear dispatch y state
   const [state, dispatch] = useReducer(categoryReducer, initialState);
+
+  // funciones
+  // obtener su id de una categoria seleccionada
+  const currentCategory = (id) => {
+    dispatch({
+      type: CURRENT_CATEGORY,
+      payload: id,
+    });
+  };
 
   // agregar categoria
   const addCategory = (category) => {
@@ -61,7 +72,6 @@ const CategoryState = ({ children }) => {
 
   //   editar tarea seleccionada
   const editCategory = (category) => {
-    console.log(category);
     dispatch({
       type: EDIT_CATEGORY,
       payload: category,
@@ -88,6 +98,8 @@ const CategoryState = ({ children }) => {
       value={{
         categories: state.categories,
         categoryselect: state.categoryselect,
+        categoryvideo: state.categoryvideo,
+        currentCategory,
         addCategory,
         selectCategory,
         editCategory,

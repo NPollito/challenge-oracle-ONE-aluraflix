@@ -4,7 +4,7 @@ import categoryContext from "../../context/categories/categoryContext";
 const OptionList = ({ value, data, setData }) => {
   // obtener el state de las categorias
   const categoriesContext = useContext(categoryContext);
-  const { categories } = categoriesContext;
+  const { categories, currentCategory } = categoriesContext;
 
   const [error, setError] = useState(false);
 
@@ -24,6 +24,11 @@ const OptionList = ({ value, data, setData }) => {
     setError(false);
   };
 
+  // obtener el id de una categoria
+  const handleClick = (id) => {
+    currentCategory(id);
+  };
+
   return (
     <div className="bg-field rounded-3" style={{ height: "58px" }}>
       <select
@@ -37,7 +42,9 @@ const OptionList = ({ value, data, setData }) => {
           Escoja una categoria
         </option>
         {categories.map((category) => (
-          <option key={category.id}> {category.name}</option>
+          <option key={category.id} onClick={() => handleClick(category.id)}>
+            {category.name}
+          </option>
         ))}
       </select>
 

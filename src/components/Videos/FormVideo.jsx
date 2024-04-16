@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import categoryContext from "../../context/categories/categoryContext";
+import videoContext from "../../context/videos/videoContext";
+
 import TextField from "../layout/TextField";
 import OptionList from "../categories/OptionList";
 import TextArea from "../layout/TextArea";
@@ -7,6 +10,14 @@ import Button from "../layout/Button";
 import ButtonLink from "../layout/ButtonLink";
 
 const FormVideo = () => {
+  // obtener state de las categoryas
+  const CategoryContext = useContext(categoryContext);
+  const { categoryvideo } = CategoryContext;
+
+  // obtener el state de los videos
+  const VideoContext = useContext(videoContext);
+  const { addVideo } = VideoContext;
+
   const [data, setData] = useState({
     title: "",
     linkVideo: "",
@@ -14,8 +25,6 @@ const FormVideo = () => {
     category: "",
     description: "",
   });
-
-  const [error, setError] = useState(false);
 
   // desustructurar data
   const { title, linkVideo, linkImage, category, description } = data;
@@ -35,10 +44,10 @@ const FormVideo = () => {
       return;
     }
 
-    setError(false);
-
-    // asignar un id
+    // asignar un id y una id de la categoria
     data.id = uuidv4();
+    data.idCategory = categoryvideo[0].id;
+    addVideo(data);
 
     // reiniciar o limpiar el formulario
     cleanForm();
@@ -93,10 +102,6 @@ const FormVideo = () => {
         data={data}
         setData={setData}
       />
-
-      {error && (
-        <p className="text-danger">Todos los campos son obligatorios</p>
-      )}
 
       <div className="d-flex flex-wrap justify-content-around justify-content-md-between">
         <div className="d-flex gap-3 mb-4">
