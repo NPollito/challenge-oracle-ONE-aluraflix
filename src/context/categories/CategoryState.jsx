@@ -16,14 +16,20 @@ const CategoryState = ({ children }) => {
     categories: [
       {
         id: "100",
+        name: "Front End",
+        description: "Fomación Front end",
+        color: "#6bd1ff",
+        code: "898",
+      },
+      {
+        id: "200",
         name: "Back End",
-        description:
-          "Todos los videos que estory usando para estudiar Back End",
+        description: "Todos los videos que estoy usando para estudiar Back End",
         color: "#ff0000",
         code: "2100",
       },
       {
-        id: "200",
+        id: "300",
         name: "Mobil",
         description:
           "Contenido que vengo estudiando sobre react native y flutter",
@@ -31,10 +37,10 @@ const CategoryState = ({ children }) => {
         code: "800",
       },
       {
-        id: "300",
-        name: "Infraestructura",
-        description: "Todod lo que estoy aprendiendo dobre docker y mucho más",
-        color: "#bcff04",
+        id: "400",
+        name: "Innovación y Gestión",
+        description: "Como mantener al equipo feliz y mucho más",
+        color: "#3245ef",
         code: "52",
       },
     ],

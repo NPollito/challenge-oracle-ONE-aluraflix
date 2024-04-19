@@ -14,7 +14,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* sytle bootstrap */
+/* ====== sytle bootstrap ====== */
 .btn-primary {
   background-color: var(--color-primary);
 }
@@ -24,7 +24,7 @@ form .btn-secondary {
   background-color: #9e9e9e;
 }
 
-/* my style */
+/* ====== my style ======  */
 header {
   background-color: #000000;
   border-bottom: 2px solid var(--color-primary);
@@ -115,6 +115,6 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type="number"] {
+/* input[type="number"] {
   -moz-appearance: textfield;
-}
+} */
